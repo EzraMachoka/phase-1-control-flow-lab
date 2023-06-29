@@ -1,49 +1,31 @@
-// function scuberGreetingForFeet(feet){
-//   let distance;
-//   if (distance <=400); {
-//    console.log ("This one is on me!")
-//   }
-//  if (distance> 2000){
-//     console.log ('I will gladly take your thirty bucks.')
-//   }
-//   else if (distance>2500){
-//     console.log('No can do.')
-//   }
-
-// }
-
-// function ternaryCheckCity(city){
-//   // Write your code here!
-//   let city
-//   if (city= NYC){
-//     console.log('OK, sounds good.')
-
-//   }
-//   else if (city= !NYC && city ==Pitsburgh){
-//     console.log('No Go.')
-
-//   }
-
-// }
-
-function switchOnCharmFromTip(){
+function scuberGreetingForFeet(distance){
   // Write your code here!
-  let tip = ["generous", "!generous"]
-  if (tip== generous){
-    console.log('Thank you so much.')
-    
+  if(distance<400){
+    return 'This one is on me!'
+  }else if(distance>2000 && distance < 2500){
+    return 'I will gladly take your thirty bucks.'
+  }else{
+    return 'No can do.'
   }
-  else if (tip == !generous) {
-    console.log('Thank you.')
-  }
-  
-  else {
-    console.log ('Bye') 
-      
-    
-  }
-  
 
 }
 
-switchOnCharmFromTip();
+function ternaryCheckCity(city){
+  // Write your code here!
+  return city === "NYC"?"Ok, sounds good.":"No go."
+}
+
+function switchOnCharmFromTip(tip){
+  // Write your code here!
+  switch(tip){
+    case 'generous':
+      return "Thank you so much."
+    break
+    case 'not as generous':
+      return "Thank you."
+    break
+
+    default:
+     return "Bye."
+  }
+}
